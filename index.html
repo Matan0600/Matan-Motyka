@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+</head> 
+<body>
+    <div id="particles-js"></div>
+    <header class="header">
+        <div class="userLogoImgContainer">
+        <img src="Images/myImage.jpg" alt="myImage" class="myImage">
+        <span class="creatorName">Matan Motyka &#9812</span>
+        </div>
+        <span class="skullSymbol">&#9760</span>
+        <nav>
+            <span class="hamburgerMenu">&#9776</span>
+            <ul class="navBarUL">
+                <li><a href="#top" class="anchors"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#about" class="anchors"><i class="fa-solid fa-address-card"></i> About</a></li>
+                <li><a href="#galleryContainer" class="anchors"><i class="fa-brands fa-servicestack"></i> Gallery</a></li>
+                <li><a href="#contact" class="anchors"><i class="fa-solid fa-address-book"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="settingsContainer">
+            <button class="theme1">Red Theme</button>
+            <button class="theme2">Blue Theme</button>
+            <button id="audioButton">Play Music <span class="symbol-settings"><i class="fa fa-play" aria-hidden="true"></i></span></button>
+            <button id="previousButton">Previous Song <i class="fa fa-step-backward" aria-hidden="true"></i></button>
+            <button id="nextButton">Next Song <i class="fa fa-step-forward" aria-hidden="true"></i></button>
+        </div>
+        <audio id="audio">
+            <source id="audioSource" src="Audio/Punch-Deck~I-Can't-Stop.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="welcomeBox">
+            <div class="songName"></div>
+            <h1 id="animatedText">Welcome To my First Website</h1>
+        </div>
+        <div class="iconsContainer">
+            <img src="Images/img-Bootstrap.png" alt="BOOTSTRAPicon">
+            <img src="Images/img-CSS.png" alt="CSSicon">
+            <img src="Images/img-HTML.png" alt="HTMLicon">
+            <img src="Images/img-JS.png" alt="JSicon">
+            <img src="Images/img-SASS.png" alt="SASSicon">
+            <img src="Images/img-ES6.png" alt="ES6icon">
+        </div>
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="userImgContainer">
+                <img src="Images/myImage.jpg" alt="myImage" class="myImage">
+            </div>
+            <br>
+            <br>
+            <p>
+                Hello my name is <span class="primary-color">Matan Motyka</span> I am 25 years old and this is my first ever website, at 15 years of age I learned to program in <span class="primary-color">LUA</span> language completely by self to a <span class="primary-color">game</span> I loved at the time,
+                I did it as a hobbie and I noticed I really love it and I am actually very good at it too, In this website my goal was to be creative and to try new things we didn't learn or saw before
+                with the help of <span class="primary-color">ChatGPT</span> and some <span class="primary-color">Websites</span>, I was able to learn quickly many cool things, how to use them and how to make them, my favorite part about <span class="primary-color">programming</span>
+                is the ability to bring your creativity and special touch to everything you make
+                and the only limit is your <span class="primary-color">imagination</span> and <span class="primary-color">willingness</span> to invest in what you're doing.
+            </p>
+            <a href="Matan_Motyka.docx" download=""><button id="myResume">Download Resume</button></a>
+        </section>
+        <div id="galleryContainer">
+            <h2 class="galleryH2">Gallery</h2>
+            <div class="gallery">
+            <div id="fireFlies"><canvas id="firefliesCanvas"></canvas></div>
+                <a href="Project1/transitionPage.html" target="_blank"><section class="projects">
+                <img src="Project1/Images/Coffee2.png" alt="Coffee">
+                <br><br>
+                <h2>Project 1</h2>
+                <br>
+                <p>
+                    Project 1/6 presenting a landing page for a free coffee coupon to start your day with a smile
+                </p>
+            </section></a>
+                <a href="Project2/transitionPage.html" target="_blank"><section class="projects">
+                <img src="Project2/Images/Path15-2.png" alt="Path15">
+                <br><br>
+                <h2>Project 2</h2>
+                <br>
+                <p>
+                    Project 2/6 presenting a landing page for a service that can help you reach your goals
+                </p>
+            </section></a>
+                <a href="Project3/transitionPage.html" target="_blank"><section class="projects">
+                <img src="Project3/Images/hereAndnow.png" alt="hereAndNow">
+                <br><br>
+                <h2>Project 3</h2>
+                <br>
+                <p>
+                    Project 3/6 presenting a lading page that allows you to enjoy a variety of gifts
+                </p>
+            </section></a>
+                <a href="Project4/transitionPage.html" target="_blank"><section class="projects">
+                <img src="Project4/Images/backgroundPath15.png" alt="backgroundPath15">
+                <br><br>
+                <h2>Project 4</h2>
+                <br>
+                <p>
+                    Project 4/6 presenting a landing page similar to project2 offering tools and guidence to improve
+                </p>
+            </section></a>
+            <a href="Project5/transitionPage.html" target="_blank"><section class="projects">
+                <img src="Project5/Images/project5Image2.png" alt="project5Image">
+                <br><br>
+                <h2>Project 5</h2>
+                <br>
+                <p>
+                    Project 5/6 presenting a landing page offering a free consultation with an expert
+                </p>
+            </section></a>
+            <a href="Project6/transitionPage.html" target="_blank"><section class="projects">
+                <img src="Project6/Images/project6Image.png" alt="project6Image">
+                <br><br>
+                <h2>Project 6</h2>
+                <br>
+                <p>
+                    Project 6/6 presenting a landing page of discovering the world and have adventrues
+                </p>
+            </section></a>
+        </div>
+    </div>
+        <div id="contact">
+            <h2 class="contactH2">Contact Us</h2>
+            <form action="" class="inputsField">
+                <label for="userNameInput" class="inputs">Full Name:</label>
+                <Input type="text" id="userNameInput" placeholder="Matan Motyka" class="inputs">
+                <span id="error1" class="inputs"></span>
+                <label for="userEmailInput" class="inputs">Email:</label>
+                <input type="email" name="" id="userEmailInput" placeholder="matan2025@gmail.com" class="inputs">
+                <span id="error2" class="inputs"></span>
+                <label for="userNumberInput" class="inputs">Phone Number:</label>
+                <input type="number" id="userNumberInput" placeholder="0527585135" class="inputs">
+                <span id="error3" class="inputs"></span>
+                <input type="button" value="Send" id="btn" class="inputs">
+            </form>
+            <div class="loader"></div>
+        </div>
+    </main>
+    <footer>
+        <div class="icon-row">
+            <div class="icon-container">
+                <div class="icon"><img src="Images/Icon simple-phone.png" alt="phoneIcon"></div>
+                <div class="icon-text">0534980911</div>
+            </div>
+            <div class="icon-container">
+                <div class="icon"><img src="Images/Icon simple-whatsapp.png" alt="whatsAppIcon"></div>
+                <div class="icon-text">035123490</div>
+            </div>
+            <div class="icon-container">
+                <div class="icon"><img src="Images/Icon simple-email.png" alt="emailIcon"></div>
+                <div class="icon-text">future71@gmail.com</div>
+            </div>
+            <div class="icon-container">
+                <div class="icon"><img src="Images/Icon awesome-facebook-f.png" alt="faceBookIcon"></div>
+                <div class="icon-text">#future71</div>
+            </div>
+            <div class="icon-container">
+                <div class="icon"><img src="Images/Icon material-location-on.png" alt="locationIcon"></div>
+                <div class="icon-text">Ainstein 7, Tel-Aviv</div>
+            </div>
+            <div class="icon-container">
+                <div class="icon"><img src="Images/Icon awesome-linkedin-in.png" alt="linkedInIcon"></div>
+                <div class="icon-text">#future71</div>
+            </div>
+        </div>
+    </footer>
+    <span class="copyRight">&copy; All Rights reserved, this website was made by Matan Motyka &#9996</span>
+    <script src="Script/index.js"></script>
+</body>
+</html>

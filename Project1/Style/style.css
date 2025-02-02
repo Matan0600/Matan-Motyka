@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap0");
+
+:root {
+  --primary-color: #020253;
+  --bg-color: #e5eeff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Heebo", "Arial", sans-serif;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+h1,
+p,
+label {
+  color: var(--primary-color);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.container-img {
+  width: 60vw;
+}
+
+img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.container-form {
+  width: 27vw;
+  padding: 0 5em;
+  display: flex;
+  flex-direction: column;
+  margin-left: 8em;
+}
+
+.container-form-title {
+  margin-bottom: 1.4em;
+
+  h1 {
+    margin-bottom: 0.4em; 
+    font: normal normal 900 40px/60px Heebo;
+  }
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.4em;
+}
+
+label {
+  font: normal normal bold 16px/24px Heebo;
+  color: #2c2c2c;
+}
+
+input {
+  height: 40px;
+}
+
+input[type="text"] {
+  background: var(--bg-color);
+  border: transparent;
+  border-bottom: 3px solid var(--primary-color);
+}
+
+input[type="email"] {
+  background: var(--bg-color);
+  border: transparent;
+  border-bottom: 3px solid var(--primary-color);
+}
+
+input[type="submit"] {
+  font: normal normal bold 18px/24px Heebo;
+  width: 48%;
+  height: 42px;
+  background: var(--primary-color) 0% 0% no-repeat padding-box;
+  color: #ffffff;
+  letter-spacing: 0.33px;
+  /* margin: 20px; */
+}
+
+@media (max-width: 576px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .container-img,
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .container-form {
+    width: 110%;
+    margin: 3.5rem auto;
+    margin-left: -1.2em;
+  }
+
+  .container-form-title h1 {
+    /* margin-top: 1.1em; */
+    font: normal normal 900 28px/28px Heebo;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    height: 38px;
+  }
+}

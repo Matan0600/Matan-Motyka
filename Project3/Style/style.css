@@ -1,0 +1,128 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Assistant", "Arial", sans-serif;
+  background: transparent linear-gradient(180deg, #281EFF 0%, #2DFF8C 100%) 0% 0% no-repeat padding-box;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+    h1 {
+      font: normal normal normal 160px/231px Satisfy;
+      color: #FFFFFF;
+      text-shadow: 0px 0px 36px #00000087;
+    }
+
+    h2 {
+      font: normal normal normal 32px/38px Varela Round;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font: normal normal 16px/20px Varela Round;
+      color: #F9F9F9;
+      margin-bottom: 40px;
+    }
+}
+
+.form-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 25px;
+  align-items: self-end;
+}
+
+.inputNlabel {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font: normal normal normal 16px/20px Varela Round;
+  color: #F9F9F9;
+}
+
+input {
+  height: 40px;
+  width: 310px;
+  background: #F6F6F624 0% 0% no-repeat padding-box;
+  border: 2px solid #FFFFFF;
+}
+
+input[type="submit"] {
+  font: normal normal normal 16px/20px Varela Round;
+  color: #1C1C1C;
+  width: 145px;
+  height: 40px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: transparent;
+  letter-spacing: 0.33px;
+}
+
+@media (max-width: 576px) {
+
+  section {
+    margin-top: -50px;
+    margin-bottom: 25px;
+    h1 {
+      font: normal normal normal 60px/86px Satisfy;
+    }
+  
+    h2 {
+      font: normal normal normal 18px/22px Varela Round;
+      text-align: center;
+    }
+  
+    p {
+      font: normal normal normal 16px/20px Varela Round;
+      text-align: center;
+    }
+  }
+
+  .form-control {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .inputNlabel {
+    flex-direction: column;
+  }
+
+  input {
+    width: 302px;
+  }
+
+  input[type="submit"] {
+    width: 302px;
+  }  
+}

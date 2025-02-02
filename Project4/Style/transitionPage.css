@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Orbitron;
+    src: url(Fonts/Orbitron/Orbitron-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Caveat;
+    src: url(Fonts/Caveat/Caveat-VariableFont_wght.ttf);
+}
+
+@keyframes moveElement {
+    0% {
+        transform: translateX(-200px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes moveAround {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+    transform: scaleX(1);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 2.5px var(--primary-color2), 0 0 10px var(--primary-color2), 0 0 10px var(--primary-color2);
+    }
+    to {
+        text-shadow: 0 0 5px var(--primary-color), 0 0 20px var(--primary-color), 0 0 10px var(--primary-color);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% { 
+        opacity: 0.3;
+        transform: scale(1); }
+    100% { 
+        opacity: 0;
+        transform: scale(2); }
+}
+
+:root {
+    --primary-color: rgb(149, 255, 0);
+    --primary-color2: red;
+}
+
+body {
+    background: transparent linear-gradient(90deg, rgb(13, 13, 13) 50%, black 100%) 0% 0% no-repeat padding-box;
+    font-family: Orbitron, serif;
+    overflow-x: hidden;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.trailEffectparticle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--primary-color2);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: fadeOut 0.5s linear forwards;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    margin-top: 7vh;
+    height: 93vh;
+    z-index: 0;
+}
+
+header {
+    width: 100%;
+    height: 7vh;
+    box-shadow: 1px 1px 10px 1px grey;
+    background-color: rgb(15, 15, 15);
+}
+
+.userLogoImgContainer {
+    position: absolute;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 18px;
+    margin-left: 25px;
+    margin-top: 9px;
+
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        transition: box-shadow 0.5s ease-in-out;
+        box-shadow: 0.5px 0.5px 10px 0.5px var(--primary-color2);
+        animation: rotate 4s infinite alternate;
+    }
+
+    img:hover {
+        box-shadow: 1px 1px 10px 1.5px var(--primary-color);
+    }
+
+    a:hover {
+        cursor: pointer;
+    }
+}
+
+.creatorName {
+    font-size: 0.9rem;
+    opacity: 1;
+    color: var(--primary-color2);
+    font-family: Orbitron, serif;
+    text-shadow: 0 0 4px var(--primary-color), 0 0 4px var(--primary-color), 0 0 4px var(--primary-color);
+    animation: spacing 2s ease-in-out;
+}
+
+.skullSymbol {
+    color: var(--primary-color2);
+    opacity: 0.8;
+    position: absolute;
+    margin-left: 95vw;
+    margin-top: 10px;
+    font-size: 2.1rem;
+    transition: color 1s ease-in-out;
+    text-shadow: 0 0 3px var(--primary-color), 0 0 3px var(--primary-color), 0 0 3px var(--primary-color);
+    animation: moveAround 1s infinite alternate;
+}
+
+.skullSymbol:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 40vh;
+    border: transparent;
+    box-shadow: 1px 1px 10px 1px grey;
+    gap: 10px;
+
+    h1 {
+        font-size: 5.5rem;
+        color: var(--primary-color2);
+        text-shadow: 0 0 2px grey, 0 0 10px grey, 0 0 14px grey;
+    }
+
+    p {
+        color: grey;
+        font-size: 1.25rem;
+    }
+
+    button {
+        color: var(--primary-color2);
+        font-family: Orbitron, serif;
+        font-size: 1.1rem;
+        background-color: transparent;
+        border: transparent;
+        border-radius: 25px;
+        padding: 12px;
+        margin-top: 20px;
+        transition: transform 0.45s ease-in-out;
+        box-shadow: 1px 1px 6px 1px grey;
+        animation: glow 1.5s infinite alternate;
+    }
+
+    button:hover {
+        transform: scale(0.9);
+        cursor: pointer;
+    }
+}
+
+.buttonsContainer {
+    display: flex;
+    gap: 0.7em;
+    flex-direction: row;
+    z-index: 1;
+
+    a {
+        transition: transform 0.4s ease-in-out;
+    }
+
+    a:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+    }
+}
+
+.iconsContainer {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 1px 1px 10px 1px grey;
+    background-color: rgb(15, 15, 15);
+    z-index: 1;
+
+    img {
+        transition: transform 0.4s ease-in-out;
+        animation: moveElement 2s ease;
+    }
+
+    img:hover {
+        transform: scale(1.15);
+    }
+}
+
+.imgContainer {
+
+    width: 99vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4.9em;
+
+    img {
+        width: 60%;
+        height: 60%;
+        box-shadow: 1px 1px 10px 1px grey;
+        transition: transform 0.4s ease-in-out;
+        z-index: 1;
+        animation: moveElement 2s ease;
+    }
+
+    img:hover {
+        transform: scale(0.995);
+    }
+}
+
+#fireFlies {
+    position: absolute;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.icon-row {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    height: 10.5vh;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 5em;
+    color: #3A3A3A;
+    font-family: Caveat, serif;
+    background-color: rgb(15, 15, 15);
+    box-shadow: 1px 1px 10px 1px grey;
+}
+
+.icon {
+    margin-bottom: 10px;
+    margin-top: 0.8em;
+    animation: moveElement 2s ease;
+
+    img {
+        transition: transform 0.4s ease-in-out;
+    }
+}
+
+.icon:hover img {
+    transform: scale(1.15);
+}
+
+.icon-text {
+    animation: moveElement 2s ease;
+    font-size: 1.5rem;
+    color: grey;
+}
+
+.copyRight {
+    font-family: Caveat, serif;
+    font-size: 1.5rem;
+    color: grey;
+    opacity: 0.6;
+    display: flex;
+    margin-top: 0.5em;
+    justify-content: center;
+}
+
+@media (max-width: 576px) {
+
+    .creatorName {
+        font-size: 0.8rem;
+    }
+
+    .userLogoImgContainer img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .skullSymbol {
+        margin-left: 85vw;
+        line-height: 0.95;
+        font-size: 2rem;
+    }
+
+    .main-title {
+        h1 {
+            font-size: 2.6rem;
+            color: var(--primary-color2);
+            text-shadow: 0 0 2px grey, 0 0 10px grey, 0 0 14px grey;
+        }
+    
+        p {
+            font-size: 1rem;
+            text-align: center;
+        }
+    
+        button {
+            padding: 8px;
+            font-size: 1rem;
+        }
+    }
+
+    .imgContainer {
+    
+        img {
+            width: 80%;
+            height: 80%;
+        }
+    }
+
+    .icon-row {
+        gap: 25px;
+        height: 31vh;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        margin-top: 5em;
+        color: #3A3A3A;
+        font-family: Caveat, serif;
+        background-color: rgb(15, 15, 15);
+        box-shadow: 1px 1px 10px 1px grey;
+    }
+
+    .icon-text {
+        font-size: 1.2rem;
+    }
+    
+
+    .copyRight {
+        font-size: 0.95rem;
+    }
+}
